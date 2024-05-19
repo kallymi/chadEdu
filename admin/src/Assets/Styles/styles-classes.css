@@ -1,0 +1,27 @@
+.class-parent{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
+    gap: 10px; /* Espacement entre les blocs */
+    margin: 2%;
+}
+
+.class-block{
+    background-color: rgba(41, 82, 162, 0.695);
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box; /* Assure que padding et bordure sont inclus dans la taille */
+}
+.class-block h2, p{
+    color: aliceblue;
+    
+}
+
+#delete{
+    background-color: brown;
+    margin-left: 50%;
+    /* margin-bottom: 300px; */
+    
+}
+#delete:hover{
+    background-color: rgb(231, 14, 14);
+}

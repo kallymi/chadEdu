@@ -1,0 +1,98 @@
+.tester{
+    background-color: #FFFAF3;
+    margin: 2% 2% 2% 2%;
+    padding: 2% 2% 2% 2%;
+    border-radius: 5%;
+}
+h1{
+    margin-left: 3% ;
+    margin-right: 50%;
+    font-size: 42px;
+    line-height: 51px;
+    font-weight: 600px;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap; /* Permettre le retour à la ligne des éléments flex */
+    justify-content: space-between;
+}
+
+.class-block {
+    width: calc(25% - 20px); /* Calculez la largeur pour 4 éléments par ligne avec un espacement de 20px */
+    border-radius: 30px;
+    background-color: #007C7C;
+    padding: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%; /* Ajoutez un espacement en bas pour séparer les lignes */
+    box-sizing: border-box; /* Incluez le padding et la bordure dans la largeur */
+}
+.class-block a{
+    color: azure;
+}
+.class-block a:hover{
+    color: rgb(13, 83, 141);
+}
+/* h2, p {
+    color: white;
+    font-family: Arial, sans-serif;
+} */
+.class-block p{
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 250px;
+}
+.class-block h2{
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    line-height: 41px;
+    font-weight: 500px;
+    font-family: Arial, sans-serif;
+}
+
+#price{
+    font-size: 25px;
+    line-height: 31px;
+    font-weight: 300px;
+}
+
+/*  */
+
+.programs-container {
+    display: flex;
+    flex-wrap: wrap; /* This allows items to wrap to the next line if they don't fit in one line */
+    gap: 16px; /* Adjust the gap between blocks as needed */
+}
+
+.class-block {
+    flex: 1; /* Makes each block take equal space within the container */
+    min-width: 200px; /* Adjust the minimum width as needed */
+    border: 1px solid #ccc;
+    justify-content: space-between;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #007C7C;
+}
+/* .content-detail{
+    margin: 4% 4% 4% 4%;
+    background-color: #007C7C;
+
+} */
+/* CSS ClassDetail */
+#h2{color: black;}
+.content-detail{
+    margin: 2% 2% 2% 2%;
+}
+.content-detail h2, p, h3{
+    text-align: center;
+}
+.program-content{
+    display: flex;
+    flex-wrap: wrap; /* Permettre le retour à la ligne des éléments flex */
+    justify-content: space-between;
+
+}

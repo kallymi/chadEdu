@@ -1,0 +1,68 @@
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+ 
+.course-title{
+    margin: 2%;
+}
+
+  /* Style pour le titre du cours */
+#title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+  
+  /* Style pour la description du cours */
+h2 , p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+  
+  /* Style pour les vidéos */
+h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style pour les évaluations */
+h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+  
+  /* Style pour les questions */
+p {
+    color: #666;
+    font-size: 16px;
+}
+  
+  /* Style pour les options de réponse */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+li {
+    margin-bottom: 5px;
+}
+  
+  /* Style pour les vidéos */
+video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+  

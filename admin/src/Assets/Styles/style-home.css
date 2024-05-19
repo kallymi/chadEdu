@@ -1,0 +1,77 @@
+.dashboard{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2% 0% 2%;
+}
+
+.dashboard .dashboard-nav {
+    display: block;
+    /* background-color: rgba(41, 82, 162, 0.695); */
+}
+
+.navbar .container{
+    background-color:rgba(41, 82, 162, 0.695);
+    /* padding: 15%; */
+    /* margin-right: -80%; */
+}
+.logo{
+    width: 80px;
+    height: auto;
+    border-radius: 40%;
+    margin: 1% 1% 0 0;
+}
+
+#brand {
+    color: white;
+    margin-left: 3% ;
+    margin-right: 10%;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 300px;
+}
+/* .nav-links ul  Link {
+    margin-right: 20px;
+   
+  
+} */
+
+.nav-links li:last-child {
+    margin-right: 0; /* Supprime la marge du dernier élément */
+}
+
+.nav-links li a {
+    color: #333;
+    text-decoration: none;
+    margin: 2%;
+    color: white;
+    /* padding: 20%; */
+    font-size: 20px;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+main{
+    
+    background-color: antiquewhite;
+    border-radius: 2%;
+}
+
+main li {
+    text-decoration: none;
+    
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.main-bloc {
+    width: calc(50% - 10px); /* Pour que deux blocs tiennent côte à côte */
+    background-color: aqua;
+    padding: 1%;
+    border-radius: 20px;
+    margin: 3% 2% 4% 1%; /* Ajustez les marges selon votre besoin */
+} /* Ajustez les marges selon votre besoin */
