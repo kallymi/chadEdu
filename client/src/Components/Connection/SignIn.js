@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // import config from '../../Services/config.js';
 import '../../Assets/Styles/style_page_connection.css';
 import image from '../../Assets/Images/logoSite.jpg';
+import NavbarAuth from './NavBar';
 const SignIn = () => {
     const [data, setData] = useState({ email: '', password: '' });
     const [error, setError] = useState('');
@@ -38,14 +39,11 @@ const SignIn = () => {
 
     return (
         <>
-            
+            <NavbarAuth/>
             <div className='content'>
-                
-                <div className='bloc-image'>
-                <h2 id='title'>  Merci de bien vouloir vous authentifier</h2>
-                    <img src={image} alt="" />
-                </div>
+
                 <div className='form-container'>
+                <h2 id='title'>  Merci de bien vouloir vous authentifier</h2>
                     <form onSubmit={handleSubmit} className='form'>
                         <div className='form-group'>
                             <label htmlFor='email' className='label'>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import './ClassesStyle.css';
+import './classList.css';
+
 import { GoArrowRight } from "react-icons/go";
 const ClassesList = () => {
     const [classes, setClasses] = useState([]);
@@ -20,11 +21,12 @@ const ClassesList = () => {
     }, []);
 
     return (
-        <div className='tester'>
+        <div className='test'>
+            {/* <MyNavbar /> */}
             <h1>Nos classes</h1>
-            <div className="grid-container">
+            <div className="container">
                 {classes.map((cls) => (
-                    <div key={cls._id} className="class-block">
+                    <div key={cls._id} className="block">
                         <h2>{cls.name}</h2>
                         <p>{cls.description}</p>
                         <p id='price'>Prix : {cls.price} FCFA</p>

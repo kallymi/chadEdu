@@ -32,12 +32,17 @@ function AllCourse() {
     const handleEdit = (courseId) => {
         navigate(`/edit-course/${courseId}`);
     };
-
+    const HandleNew =  () =>{
+        navigate('/NewCourse');
+    };
+    const HandleRedirect =  () =>{
+        navigate('/home');
+    };
     return (
-        <div>
+        <div className='racine'>
             <h2>Liste des cours</h2>
-            <a href={'/home'}>Revenir</a><br/>
-            <a href={'/NewCourse'}>ajouter un nouveau cours</a>
+            <button onClick={HandleRedirect}>Revenir</button>
+            <button onClick={HandleNew}> Ajouter un nouveau Cours</button>
             <div className='class-parent'>
                 {courses.map(course => (
                     <div key={course._id} className='class-block'>

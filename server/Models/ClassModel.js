@@ -9,10 +9,6 @@ const classSchema = new mongoose.Schema({
     programs: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Program',
-        courses:[{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Course'
-        }]
     }],
     price: {
         type: Number,

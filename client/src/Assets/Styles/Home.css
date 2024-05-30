@@ -42,47 +42,51 @@
 
 /* Section 1 Statistique */
 
-#statistiques{
+#Statistiques{
     margin: 5% 2% 4% 2%;
     padding: 10%;
-    background-color: antiquewhite;
+    background-color: var(--last-color);
     border-radius: 5%;
 }
-#statistiques h2{
+#Statistiques h2{
     margin-left: 3% ;
     margin-right: 20%;
-    color: #4B4627 ;
+    color: var(--primary-color) ;
     font-size: 46px;
     line-height: 56px;
     font-weight: 600px;
 }
 
-.statistiques-grid{
+.Statistiques-grid{
     display: flex;
     justify-content: space-between;
 }
-.statistiques-grid .stat-item{
+.Statistiques-grid .stat-item{
     width: calc(35% - 20px);
     border-radius: 30px;
-    background-color: aquamarine;
+    background-color: var(--primary-color);
     padding: 20px;
     /* padding: 10px;
     margin-top:2% ; */
     padding-bottom: 5%;
 }
 .stat-item:hover{
-    background-color: #4B4627;
+    background-color: var(--secondary-color);
 }
-.statistiques-grid .stat-item h3{
+.Statistiques-grid .stat-item h3{
     margin-left: 3% ;
     margin-right: 10%;
     font-size: 18px;
     line-height: 26px;
     font-weight: 300px;
+    color: #FFFFFF;
+}
+.Statistiques-grid .stat-item p{
+    color: #FFFFFF;
 }
 #btn-statistiques{
     border: none;
-    background-color: #33A5FF;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     margin: 5% 0% 0% 30%;
     color: #FFFFFF;
@@ -96,12 +100,12 @@
 /* Partenaire */
 .partenaire{
     margin: 5%;
-    background-color: #33A5FF;
+    background-color: var(--secondary-color);
     border-radius: 50px;
     padding: 5%;
 }
 .partenaire h2{
-    color: #FFFFFF;
+    color:black;
     margin-left: 3% ;
     font-size: 32px;
     line-height: 41px;
@@ -130,14 +134,23 @@
 footer {
     /* display: flex;
     justify-content: space-around; */
-    background-color: black;
+    background-color: var(--primary-color);
     padding: 5% 5% 5% 5%;
     margin: 5% 1% 1% 1%;
     border-radius: 5%;
 }
+
 .footer{display: flex; justify-content: space-between;}
 footer div{
     display: block;
+}
+footer h2{
+    color: #FFFFFF;
+    margin-left: 3% ;
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 600px;
+
 }
 #logo-footer{
     width: 5%;
@@ -148,5 +161,5 @@ footer div{
 }
 .footer-links a{
     text-decoration: none;
-
+    color: #FFFFFF;
 }

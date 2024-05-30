@@ -1,0 +1,49 @@
+/* src/components/Navbar.css */
+.principalNav{
+    background-color: var(--primary-color);
+    padding-bottom: 5%;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    padding-bottom: 5%;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.text-detail h2, p {
+    color: aliceblue;
+    text-align: center;
+}
+
+.navbar-brand img{
+    width: 50%;
+    height: 45%;
+    margin-left: 20%;
+}
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+  
+.navbar-links li {
+    margin: 0;
+}
+  
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+  
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+  

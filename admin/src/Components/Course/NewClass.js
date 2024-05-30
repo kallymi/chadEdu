@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from "axios";
+import axios from 'axios';
 
 function NewClass() {
     const [classData, setClassData] = useState({
@@ -17,20 +17,18 @@ function NewClass() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('Data to be sent:', classData);
         try {
             const response = await axios.post('http://localhost:5000/api/classes', classData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            console.log(classData)
-            if (response.status === 201) {
-                console.log('Classe ajoutée avec succès !');
-            } else {
-                console.error('Erreur lors de l\'ajout de la classe');
-            }
+            console.log('Response:', response);
+            alert('Classe ajoutée avec succès !');
+            window.location = '/AllClass';
         } catch (error) {
-            console.error('Erreur:', error);
+            console.error('Erreur:', error.response ? error.response.data : error.message);
         }
     };
 
@@ -40,11 +38,34 @@ function NewClass() {
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Nom de la classe:</label>
-                    <input type="text" id="name" name="name" value={classData.name} onChange={handleChange} required />
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={classData.name}
+                        onChange={handleChange}
+                        required
+                    />
                 </div>
                 <div className="form-group">
                     <label htmlFor="description">Description:</label>
-                    <textarea id="description" name="description" value={classData.description} onChange={handleChange} required></textarea>
+                    <textarea
+                        id="description"
+                        name="description"
+                        value={classData.description}
+                        onChange={handleChange}
+                        required
+                    ></textarea>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="price">Prix:</label>
+                    <textarea
+                        id="price"
+                        name="price"
+                        value={classData.price}
+                        onChange={handleChange}
+                        required
+                    ></textarea>
                 </div>
                 <button type="submit">Ajouter la classe</button>
             </form>

@@ -24,11 +24,8 @@ function NewProgram() {
                 }
             });
             console.log(programData)
-            if (response.status === 201) {
-                console.log('Programme ajouté avec succès !');
-            } else {
-                console.error('Erreur lors de l\'ajout du programme');
-            }
+            alert("'Programme ajouté avec succès !'")
+            window.location = "/All-programs"
         } catch (error) {
             console.error('Erreur:', error);
         }

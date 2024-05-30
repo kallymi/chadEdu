@@ -10,7 +10,7 @@
 }
 
 .navbar .container{
-    background-color:rgba(41, 82, 162, 0.695);
+    background-color:var(--primary-color);
     /* padding: 15%; */
     /* margin-right: -80%; */
 }
@@ -53,7 +53,7 @@
 }
 main{
     
-    background-color: antiquewhite;
+    background-color: var(--last-color);
     border-radius: 2%;
 }
 
@@ -70,7 +70,7 @@ main li {
 
 .main-bloc {
     width: calc(50% - 10px); /* Pour que deux blocs tiennent côte à côte */
-    background-color: aqua;
+    background-color: var(--secondary-color);
     padding: 1%;
     border-radius: 20px;
     margin: 3% 2% 4% 1%; /* Ajustez les marges selon votre besoin */

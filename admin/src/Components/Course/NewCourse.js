@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
+import '../../Assets/Styles/style-new-course.css';
 const NewCourse = () => {
     const [formData, setFormData] = useState({
         title: '',
@@ -11,7 +12,7 @@ const NewCourse = () => {
         images: [{ title: '', url: '' }],
         textContent: ''
     });
-
+    const navigate = useNavigate();
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -43,7 +44,8 @@ const NewCourse = () => {
             const response = await axios.post('http://localhost:5000/api/courses', formData);
             if (response.status === 201) {
                 console.log('Cours ajouté avec succès !');
-                // Réinitialiser le formulaire après l'ajout réussi
+                alert('Cours ajoutée avec succès !');
+                window.location = '/All-courses';
                 setFormData({
                     title: '',
                     category: '',
@@ -53,6 +55,8 @@ const NewCourse = () => {
                     images: [{ title: '', url: '' }],
                     textContent: ''
                 });
+                
+                navigate('/All-courses'); 
             } else {
                 console.error('Erreur lors de l\'ajout du cours');
             }

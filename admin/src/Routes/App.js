@@ -9,10 +9,13 @@ import NewProgram from '../Components/Course/NewProgram';
 import AddCourseToProgram from '../Components/Course/AddCourseToProgram';
 import AllCourse from "../Components/Course/AllCourse";
 import AllPrograms from "../Components/Course/AllPrograms";
-import DeleteProgram from "../Components/Course/DeleteProgram"
 import NewClass from "../Components/Course/NewClass";
 import AllClass from "../Components/Course/AllClass";
 import EditCourse from "../Components/Course/EditCourse";
+import EditClasse from "../Components/Course/EditClass";
+import EditProgram from "../Components/Course/EditProgram";
+import AddProgramToClass from "../Components/Course/AddProgramToClass";
+import './App.css';
 // import Programme from "../../../server/Models/Programme";
 const token = localStorage.getItem("token");
 
@@ -32,14 +35,16 @@ const App = () => {
                 />
                 <Route path="/NewCourse" element={<NewCourse />} />
                 <Route path="/NewProgram" element={<NewProgram/>} />
-                <Route path="/affecter cours au Programme" element={<AddCourseToProgram/>} />
+                
                 <Route path="/All-courses" element={<AllCourse/>} />
                 <Route path="/All-programs" element={<AllPrograms/>} />
                 <Route path="/NewClass" element={<NewClass/>} />
+                <Route path="/AddProgramToClass" element={<AddProgramToClass/>} />
                 <Route path="/AllClass" element={<AllClass/>} />
-                <Route path="/DeleteProgram" element={<DeleteProgram/>}/>
                 <Route path="/AddCourseToProgram" element={<AddCourseToProgram/>} />
                 <Route path="/edit-course/:id" element={<EditCourse />} /> 
+                <Route path="/edit-classe/:id" element={<EditClasse />} /> 
+                <Route path="/edit-program/:id" element={<EditProgram />} /> 
             </Routes>
 
         </Router>

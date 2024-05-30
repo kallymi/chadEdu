@@ -6,6 +6,8 @@ function AddCourseToProgram() {
     const [courses, setCourses] = useState([]);
     const [selectedProgram, setSelectedProgram] = useState('');
     const [selectedCourse, setSelectedCourse] = useState('');
+    const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
 
     useEffect(() => {
         const fetchPrograms = async () => {
@@ -14,6 +16,7 @@ function AddCourseToProgram() {
                 setPrograms(response.data);
             } catch (error) {
                 console.error('Error fetching programs:', error);
+                setError('Erreur lors de la récupération des programmes');
             }
         };
 
@@ -23,6 +26,7 @@ function AddCourseToProgram() {
                 setCourses(response.data);
             } catch (error) {
                 console.error('Error fetching courses:', error);
+                setError('Erreur lors de la récupération des cours');
             }
         };
 
@@ -31,18 +35,31 @@ function AddCourseToProgram() {
     }, []);
 
     const addCourseToProgram = async () => {
+        if (!selectedProgram || !selectedCourse) {
+            setError('Veuillez sélectionner un programme et un cours');
+            return;
+        }
+
         try {
-            const response = await axios.post(`http://localhost:5000/api/program/${selectedProgram}/add-course/${selectedCourse}`);
+            const response = await axios.post('http://localhost:5000/api/programs/add-course', {
+                programId: selectedProgram,
+                courseId: selectedCourse
+            });
             console.log(response.data);
-            // Gérer la réponse du serveur
+            setMessage('Cours ajouté au programme avec succès');
+            setError('');
         } catch (error) {
             console.error('Error adding course to program:', error);
+            setError('Erreur lors de l\'ajout du cours au programme');
+            setMessage('');
         }
     };
 
     return (
         <div>
             <h2>Ajouter un cours à un programme</h2>
+            {message && <p style={{ color: 'green' }}>{message}</p>}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
             <div>
                 <label>Programme:</label>
                 <select value={selectedProgram} onChange={(e) => setSelectedProgram(e.target.value)}>

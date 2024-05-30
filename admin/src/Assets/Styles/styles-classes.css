@@ -1,3 +1,14 @@
+.racine{
+    background-color: var(--last-color);
+}
+.racine button{
+    background-color: var(--primary-color);
+    margin: 2%;
+}
+.racine button:hover{
+    background-color: var(--secondary-color);
+    font-family: "Nunito", sans-serif;
+}
 .class-parent{
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
@@ -6,7 +17,7 @@
 }
 
 .class-block{
-    background-color: rgba(41, 82, 162, 0.695);
+    background-color: var(--secondary-color);
     border-radius: 20px;
     padding: 20px;
     box-sizing: border-box; /* Assure que padding et bordure sont inclus dans la taille */

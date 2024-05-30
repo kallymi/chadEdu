@@ -31,6 +31,13 @@ router.post('/classes/:classId/programs', classController.addProgramToClass);
 // Route pour récupérer les programmes d'une classe spécifique
 router.get('/class/:classId/programs', classController.getProgramsByClassId);
 // router.get('/:id/programs', classController.getProgramsByClassId);
+router.get('/classesCount', classController.getClassCount);
+//Route pour ajouter un program à une classe
+//Route pour ajouter un programme à une classe
+//Route pour ajouter un programme à une classe
+router.post('/classes/add-program', classController.addProgramToClass);
+
+
 // ************** Routes pour les Programmes ***************
 
 // Route pour créer un nouveau programme
@@ -45,7 +52,8 @@ router.put('/programs/:id', programController.updateProgramById);
 router.delete('/programs/:id', programController.deleteProgram);
 // Route pour ajouter un cours à un programme
 router.post('/programs/add-course', programController.addCourseToProgram);
-
+// Route pour récupérer le nombre de tous les programmes
+router.get('/programsCount', programController.getProgramCount);
 // ************** Routes pour les Cours ***************
 
 // Route pour créer un nouveau cours
@@ -58,7 +66,8 @@ router.get('/courses/:id', courseController.getCourseById);
 router.put('/courses/:id', courseController.updateCourse);
 // Route pour supprimer un cours par son ID
 router.delete('/courses/:id', courseController.deleteCourse);
-
+// Route pour compter les nombre de tous les cours 
+router.get('/courseCount', courseController.getCourseCount);
 // ************** Routes pour les inscription ***************
 
 // Route pour inscrire un utilisateur à une classe

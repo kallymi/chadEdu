@@ -1,0 +1,9 @@
+select {
+    color:black; /* Couleur du texte */
+    background-color: white; /* Couleur de fond */
+}
+
+option {
+    color: black; /* Couleur du texte des options */
+    background-color: white; /* Couleur de fond des options */
+}

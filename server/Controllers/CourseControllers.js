@@ -54,3 +54,16 @@ exports.deleteCourse = async (req, res) => {
         res.status(500).json({ message: "Internal Server Error", error });
     }
 };
+
+// Fonction qui permet de récupérer le nombre total de documents dans la collection Course
+// Fonction qui permet de récupérer le nombre total de documents dans la collection Course
+exports.getCourseCount = async (req, res) => {
+    try {
+        const courseCount = await Course.countDocuments();
+        res.json({ count: courseCount });
+    } catch (error) {
+        console.error('Erreur lors de la récupération du nombre de cours:', error);
+        res.status(500).json({ message: 'Erreur lors de la récupération du nombre de cours' });
+    }
+};
+

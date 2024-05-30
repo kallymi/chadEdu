@@ -14,6 +14,7 @@ import image6 from "../Assets/Images/fortlamy.jpg";
 import image7 from "../Assets/Images/hec.jpg";
 
 import '../Assets/Styles/Home.css'
+import '../App.css'
 import ClassesList from '../Components/Class/ClassesList';
 import { RiAccountCircleLine } from "react-icons/ri";
 function Home() {
@@ -35,9 +36,9 @@ function Home() {
                     </Nav>
                 </Container>
             </Navbar>
-            <div href='#Acueil' className='bloc1' >
+            <div Id='Acueil' className='bloc1' >
                 <div className=''>
-                    <h2 > Bienvenu dans notre plateforme de e-learnig
+                    <h2 > Bienvenue dans notre plateforme de e-learnig
                         on espère que vous trouverez les meilleurs cours et exercices pour vous 
                         entrainer  </h2>
                 </div>
@@ -48,10 +49,10 @@ function Home() {
             </div>
 
             {/* <!-- Section Statistiques --> */}
-            <section href='#Statistiques' id="statistiques">
+            <section href="#Statistiques" id="Statistiques">
                 <h2>Statistiques: Quelques chiffres pour vous donnez
                     une aperçue de l'impact de notre plateforme </h2>
-                <div className="statistiques-grid">
+                <div className="Statistiques-grid">
                     <div className="stat-item">
                         <h3>Apprenants</h3>
                         <p>Nombre d'étudiants inscrits</p>
@@ -68,9 +69,9 @@ function Home() {
                 </div>
                 <button id='btn-statistiques'> Voir plus de details</button>
             </section>
-            <ClassesList/>
+            <div id='Class'><ClassesList/></div>
             {/* <!-- Section Partenaires --> */}
-            <section className='partenaire'>
+            <section id='Partenaires' className='partenaire'>
             <h2>Les différets écoles et institutions de l'état qui nous font confiance</h2>
                 <div className='partenaire-content'>
                     
